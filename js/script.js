@@ -11,9 +11,16 @@ function loadData() {
     $wikiElem.text("");
     $nytElem.text("");
 
-    // load streetview
+    // load address
+    var streetStr = $('#street').val();
+    var cityStr = $('#city').val()
+    var address = streetStr + ',' + cityStr;
 
-    // YOUR CODE GOES HERE!
+    // load streetview
+    var imgSrc = 'http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' + address;
+    var backgroundImg = '<img class="bgimg" src="' + imgSrc + '">';
+    $('body').append(backgroundImg);
+
 
     return false;
 };
