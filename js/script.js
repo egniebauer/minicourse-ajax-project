@@ -48,6 +48,8 @@ function loadData() {
       }
 
       $nytElem.append(nytArticles.join( "" ));
+  }).fail(function() {
+    $nytHeaderElem.text('New York Times Articles Could Not Load');
   });
 
     // wikipedia
