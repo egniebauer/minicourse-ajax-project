@@ -55,7 +55,7 @@ function loadData() {
 
     var wikiTimeout = setTimeout( function(){
       $wikiElem.text('Wikipedia Links Could Not Load');
-    }, 8000 );
+    }, 15000 );
 
     $.ajax({
       url : wikiUrl,
