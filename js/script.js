@@ -51,11 +51,11 @@ function loadData() {
     });
 
     // wikipedia
-    var wikiUrl = 'https://en.wikiadsfasdfasdfpedia.org/w/api.php?action=opensearch&format=json&search=' + cityStr;
+    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=' + cityStr;
 
     var wikiTimeout = setTimeout( function(){
       $wikiElem.text('Wikipedia Links Could Not Load');
-    }, 15000 );
+    }, 8000 );
 
     $.ajax({
       url : wikiUrl,
