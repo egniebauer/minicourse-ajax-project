@@ -51,7 +51,7 @@ function loadData() {
     });
 
     // wikipedia
-    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=' + cityStr;
+    var wikiUrl = 'https://en.wikiadsfasdfasdfpedia.org/w/api.php?action=opensearch&format=json&search=' + cityStr;
 
     var wikiTimeout = setTimeout( function(){
       $wikiElem.text('Wikipedia Links Could Not Load');
@@ -61,8 +61,6 @@ function loadData() {
       url : wikiUrl,
       dataType : "jsonp"})
       .done( function( response ) {
-        console.log( response );
-
         var links = response[1];
 
         for (var i in links) {
